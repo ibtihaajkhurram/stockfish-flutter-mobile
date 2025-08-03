@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Compatibility attributes for older API levels -->
+    <!-- lStar attribute fallback for API < 31 -->
+    <attr name="lStar" format="float" />
+</resources> 
