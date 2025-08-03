@@ -45,8 +45,4 @@ android {
         }
     }
     
-    // Add compatibility for newer Android attributes on older API levels
-    androidResources {
-        generateLocaleConfig = true
-    }
 }
