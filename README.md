@@ -26,7 +26,7 @@ Add this to your `pubspec.yaml`:
 dependencies:
   stockfish:
     git:
-      url: https://github.com/your-username/stockfish-flutter-mobile.git
+      url: https://github.com/ibtihaajkhurram/stockfish-flutter-mobile
 ```
 
 ### Initialize Engine
@@ -75,3 +75,4 @@ stockfish.dispose();
 ---
 
 _Note: Only one instance of the engine can be created at a time._
+
