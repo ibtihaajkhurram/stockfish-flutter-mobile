@@ -14,14 +14,7 @@ buildscript {
 
 apply plugin: 'com.android.library'
 
-repositories {
-    google()
-    mavenCentral()
-    mavenLocal()
-    maven {
-        url 'https://storage.googleapis.com/download.flutter.io'
-    }
-}
+// No repositories here - the root app handles this now
 
 android {
     namespace 'com.stockfish'
@@ -54,6 +47,7 @@ android {
 }
 
 dependencies {
-    // Using debug embedding for compilation to ensure resolution in all build modes
-    compileOnly "io.flutter:flutter_embedding_debug:1.0.0-+"
+    // Locked versions to prevent the "24-hour" internet check drill
+    debugCompileOnly "io.flutter:flutter_embedding_debug:1.0.0"
+    releaseCompileOnly "io.flutter:flutter_embedding_release:1.0.0"
 }
