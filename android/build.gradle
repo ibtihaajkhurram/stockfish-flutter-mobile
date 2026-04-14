@@ -12,13 +12,6 @@ buildscript {
     }
 }
 
-rootProject.allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
 apply plugin: 'com.android.library'
 
 android {
@@ -53,5 +46,5 @@ android {
 
 dependencies {
     // This allows the plugin to see Flutter classes during compilation
-    compileOnly "io.flutter:flutter_embedding_release:1.0.0-+"
+    compileOnly project(':flutter')
 }
