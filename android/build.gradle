@@ -14,6 +14,15 @@ buildscript {
 
 apply plugin: 'com.android.library'
 
+repositories {
+    google()
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url 'https://storage.googleapis.com/download.flutter.io'
+    }
+}
+
 android {
     namespace 'com.stockfish'
     compileSdk 35
@@ -45,6 +54,6 @@ android {
 }
 
 dependencies {
-    // This is the correct way for a plugin to see Flutter
-    compileOnly "io.flutter:flutter_embedding_release:1.0.0-+"
+    // Using debug embedding for compilation to ensure resolution in all build modes
+    compileOnly "io.flutter:flutter_embedding_debug:1.0.0-+"
 }
