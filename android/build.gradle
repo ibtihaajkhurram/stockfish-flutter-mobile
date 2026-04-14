@@ -45,6 +45,6 @@ android {
 }
 
 dependencies {
-    // This allows the plugin to see Flutter classes during compilation
-    compileOnly project(':flutter')
+    // This is the correct way for a plugin to see Flutter
+    compileOnly "io.flutter:flutter_embedding_release:1.0.0-+"
 }
