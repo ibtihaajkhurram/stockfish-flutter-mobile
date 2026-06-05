@@ -2,15 +2,6 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include "Stockfish/src/bitboard.h"
-#include "Stockfish/src/endgame.h"
-#include "Stockfish/src/position.h"
-#include "Stockfish/src/search.h"
-#include "Stockfish/src/thread.h"
-#include "Stockfish/src/tt.h"
-#include "Stockfish/src/uci.h"
-#include "Stockfish/src/syzygy/tbprobe.h"
-
 #include "ffi.h"
 
 // https://jineshkj.wordpress.com/2006/12/22/how-to-capture-stdin-stdout-and-stderr-of-child-program/
@@ -44,8 +35,8 @@ int stockfish_main()
   dup2(CHILD_WRITE_FD, STDOUT_FILENO);
 
   int argc = 1;
-  char *argv[] = {""};
-  int exitCode = stockfish_entry(argc, argv);
+  const char *argv[] = {""};
+  int exitCode = stockfish_entry(argc, (char **)argv);
 
   std::cout << QUITOK << std::flush;
 
