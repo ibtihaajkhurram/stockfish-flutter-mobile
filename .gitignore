@@ -9,4 +9,5 @@ build/
 
 .depend
 *.nnue
+!ios/stockfish/Sources/stockfish/Stockfish/src/nn-82215d0fd0df.nnue
 Makefile

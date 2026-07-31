@@ -13,8 +13,8 @@ The Stockfish Chess Engine for Flutter.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*', 'FlutterStockfish/*', 'Stockfish/src/**/*'
-  s.public_header_files = 'Classes/**/*.h'
+  s.source_files = 'stockfish/Sources/stockfish/**/*.{h,m,mm,cpp}', 'stockfish/Sources/stockfish/Stockfish/src/**/*.{h,cpp}'
+  s.public_header_files = 'stockfish/Sources/stockfish/include/**/*.h'
   s.dependency 'Flutter'
   s.platform = :ios, '11.0'
 
