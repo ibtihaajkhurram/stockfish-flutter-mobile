@@ -31,6 +31,6 @@ The Stockfish Chess Engine for Flutter.
   s.xcconfig = { 
     'CLANG_CXX_LANGUAGE_STANDARD' => 'c++17',
     'CLANG_CXX_LIBRARY' => 'libc++',
-    'OTHER_CPLUSPLUSFLAGS' => '$(inherited) -w'
+    'OTHER_CPLUSPLUSFLAGS' => '$(inherited) -w -fno-stack-protector'
   }
 end

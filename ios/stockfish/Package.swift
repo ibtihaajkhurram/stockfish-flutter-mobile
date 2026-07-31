@@ -31,7 +31,7 @@ let package = Package(
             cxxSettings: [
                 .headerSearchPath("include/stockfish"),
                 .headerSearchPath("Stockfish/src"),
-                .unsafeFlags(["-std=c++17", "-w"])
+                .unsafeFlags(["-std=c++17", "-w", "-fno-stack-protector"])
             ],
             linkerSettings: [
                 .linkedLibrary("c++")
